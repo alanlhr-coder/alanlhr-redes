@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alan LHR - Redes Sociales</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barrio&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    /* Fondo con GIF animado */
+    #fondodepag {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-image: url('fondoanimado.gif'); /* ← Tu GIF aquí */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+
+    /* Filtro oscuro para mejorar legibilidad */
+    #fondodepag::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      color: white;
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .title-block, .social-links {
+      position: relative;
+      z-index: 2;
+    }
+
+    .title-block h1 {
+      font-family: 'Barrio', cursive;
+      font-size: 4em;
+      margin: 10px 0;
+      animation: floatZoom 3s ease-in-out infinite;
+    }
+
+    .title-block h1:nth-child(1) { color: #e90000; animation-delay: 0s; }
+    .title-block h1:nth-child(2) { color: #ff0000; animation-delay: 0.3s; }
+    .title-block h1:nth-child(3) { color: #ff0303; animation-delay: 0.6s; }
+
+    @keyframes floatZoom {
+      0% { transform: scale(1) translateX(0); }
+      25% { transform: scale(1.05) translateX(-5px); }
+      50% { transform: scale(1.1) translateX(5px); }
+      75% { transform: scale(1.05) translateX(-5px); }
+      100% { transform: scale(1) translateX(0); }
+    }
+
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .social-links a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.1em;
+      font-weight: 600;
+      padding: 10px 18px;
+      border: 2px solid white;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .instagram:hover { background-color: #C13584; color: white; }
+    .twitter:hover { background-color: #1DA1F2; color: white; }
+    .tiktok:hover { background-color: #25F4EE; color: white; }
+    .youtube:hover { background-color: #FF0000; color: white; }
+    .kick:hover { background-color: #53FC18; color: white; }
+    .twitch:hover { background-color: #9146FF; color: white; }
+
+    @media (max-width: 600px) {
+      .title-block h1 {
+        font-size: 2.2em;
+      }
+      .social-links a {
+        font-size: 1em;
+        padding: 8px 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Fondo con GIF animado -->
+  <div id="fondodepag"></div>
+
+  <!-- Título animado -->
+  <div class="title-block">
+    <h1>HOLA!!</h1>
+    <h1>Soy Alan LHR</h1>
+    <h1>Estas son mis redes</h1>
+  </div>
+
+  <!-- Redes sociales -->
+  <div class="social-links">
+    <a href="https://www.instagram.com/alan.lhr" target="_blank" class="instagram"><i class="fab fa-instagram"></i>Instagram</a>
+    <a href="https://www.twitter.com/tuusuario" target="_blank" class="twitter"><i class="fab fa-x-twitter"></i>Twitter</a>
+    <a href="https://www.tiktok.com/@alan_lhr1" target="_blank" class="tiktok"><i class="fab fa-tiktok"></i>TikTok</a>
+    <a href="https://www.youtube.com/@alan-lhr" target="_blank" class="youtube"><i class="fab fa-youtube"></i>YouTube</a>
+    <a href="https://www.kick.com/alan-lhr" target="_blank" class="kick"><i class="fas fa-gamepad"></i>Kick</a>
+    <a href="https://www.twitch.tv/alan_lhr" target="_blank" class="twitch"><i class="fab fa-twitch"></i>Twitch</a>
+  </div>
+</body>
+</html>
